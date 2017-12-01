@@ -10,10 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // UI Controllers
+    
+    
+    var colorPicker:ColorPicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        colorPicker = ColorPicker.instanceFromNib()
+        self.view.addSubview(colorPicker)
+        
+        colorPicker.center = self.view.center
+        colorPicker.show()
+        
+        self.colorPicker.color.asObservable().subscribe(onNext: { (color) in
+            print("Color Changed to : \(String(describing: color))")
+        })
     }
+    
+    @IBAction func show(_ sender: UIButton) {
+        self.colorPicker.show()
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

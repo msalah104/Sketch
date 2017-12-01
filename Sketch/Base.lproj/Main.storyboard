@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vMn-nd-gT3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,10 +13,20 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sketch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4g2-Ts-dv1">
+                                <rect key="frame" x="168" y="617" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show"/>
+                                <connections>
+                                    <action selector="show:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FTf-AU-yFc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -20,5 +34,133 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9mr-iB-69L">
+            <objects>
+                <navigationController id="vMn-nd-gT3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NsP-jv-7u0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DlJ-kV-hEb" kind="relationship" relationship="rootViewController" id="DKM-t9-sX3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cmp-5f-aHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866" y="134"/>
+        </scene>
+        <!--Sketch View Controller-->
+        <scene sceneID="uze-t4-ugl">
+            <objects>
+                <viewController id="DlJ-kV-hEb" customClass="SketchViewController" customModule="Sketch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lj8-Nm-Iyt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KNL-Zh-zIF">
+                                <rect key="frame" x="14" y="560" width="347" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kgx-5r-MAJ">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANk-9Q-RWz">
+                                        <rect key="frame" x="0.0" y="0.0" width="62.5" height="70"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="painter-palette"/>
+                                        <state key="selected" image="painter-palette-selected"/>
+                                        <connections>
+                                            <action selector="colorPickerDidClicked:" destination="DlJ-kV-hEb" eventType="touchUpInside" id="3M4-jA-BtB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFf-hP-bpS">
+                                        <rect key="frame" x="62.5" y="0.0" width="62.5" height="70"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="resize"/>
+                                        <state key="selected" image="resize-selected"/>
+                                        <connections>
+                                            <action selector="DidClicked:" destination="DlJ-kV-hEb" eventType="touchUpInside" id="kGp-cw-bkF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klo-vu-UxS">
+                                        <rect key="frame" x="125" y="0.0" width="62.5" height="70"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="pen"/>
+                                        <state key="selected" image="pen-selected"/>
+                                        <connections>
+                                            <action selector="pencilDidClicked:" destination="DlJ-kV-hEb" eventType="touchUpInside" id="bFB-28-06F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mm-FP-ajK">
+                                        <rect key="frame" x="187.5" y="0.0" width="62.5" height="70"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="eraser"/>
+                                        <state key="selected" image="eraser-selected"/>
+                                        <connections>
+                                            <action selector="eraserDidClicked:" destination="DlJ-kV-hEb" eventType="touchUpInside" id="AIT-zv-4Gb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvN-kc-ugo">
+                                        <rect key="frame" x="250" y="0.0" width="62.5" height="70"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="undo-arrow-in-a-circle"/>
+                                        <state key="selected" image="undo-arrow-in-a-circle-selected"/>
+                                        <connections>
+                                            <action selector="undoDidClicked:" destination="DlJ-kV-hEb" eventType="touchUpInside" id="Po6-0F-hzY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgz-WH-gq2">
+                                        <rect key="frame" x="312.5" y="0.0" width="62.5" height="70"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="redo-arrow-in-a-circle"/>
+                                        <state key="selected" image="redo-arrow-in-a-circle-selected"/>
+                                        <connections>
+                                            <action selector="redoDidClicked:" destination="DlJ-kV-hEb" eventType="touchUpInside" id="7XC-nM-bfK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="zRN-n5-fZZ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kgx-5r-MAJ" firstAttribute="leading" secondItem="gnX-Dh-xFj" secondAttribute="leading" id="9CF-01-KQh"/>
+                            <constraint firstItem="gnX-Dh-xFj" firstAttribute="trailing" secondItem="Kgx-5r-MAJ" secondAttribute="trailing" id="Gp5-UV-Ckk"/>
+                            <constraint firstItem="Kgx-5r-MAJ" firstAttribute="bottom" secondItem="gnX-Dh-xFj" secondAttribute="bottom" id="rUq-cZ-LYW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gnX-Dh-xFj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cQR-tE-H21"/>
+                    <connections>
+                        <outlet property="brushSize" destination="aFf-hP-bpS" id="8U3-QO-thZ"/>
+                        <outlet property="colorPicker" destination="ANk-9Q-RWz" id="ysg-F5-r98"/>
+                        <outlet property="eraser" destination="5Mm-FP-ajK" id="3AX-vG-vHW"/>
+                        <outlet property="pencil" destination="klo-vu-UxS" id="F2Q-F2-nbC"/>
+                        <outlet property="redo" destination="Sgz-WH-gq2" id="FFb-nR-25c"/>
+                        <outlet property="undo" destination="gvN-kc-ugo" id="VUf-7K-yc2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5o-ep-lSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1836" y="133.5832083958021"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="eraser" width="32" height="32"/>
+        <image name="eraser-selected" width="32" height="32"/>
+        <image name="painter-palette" width="32" height="32"/>
+        <image name="painter-palette-selected" width="32" height="32"/>
+        <image name="pen" width="32" height="32"/>
+        <image name="pen-selected" width="24" height="24"/>
+        <image name="redo-arrow-in-a-circle" width="32" height="32"/>
+        <image name="redo-arrow-in-a-circle-selected" width="32" height="32"/>
+        <image name="resize" width="32" height="32"/>
+        <image name="resize-selected" width="32" height="32"/>
+        <image name="undo-arrow-in-a-circle" width="32" height="32"/>
+        <image name="undo-arrow-in-a-circle-selected" width="32" height="32"/>
+    </resources>
 </document>

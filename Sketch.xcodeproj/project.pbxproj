@@ -12,9 +12,18 @@
 		AB8567E61FD16F8D0052FC7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8567E41FD16F8D0052FC7C /* Main.storyboard */; };
 		AB8567E81FD16F8D0052FC7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB8567E71FD16F8D0052FC7C /* Assets.xcassets */; };
 		AB8567EB1FD16F8D0052FC7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8567E91FD16F8D0052FC7C /* LaunchScreen.storyboard */; };
+		AB8567F91FD170A20052FC7C /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AB8567F81FD170A20052FC7C /* README.rtf */; };
+		AB8567FB1FD171C20052FC7C /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8567FA1FD171C20052FC7C /* ColorPicker.swift */; };
+		AB8567FD1FD171E10052FC7C /* ColorPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8567FC1FD171E10052FC7C /* ColorPicker.xib */; };
+		AB8567FF1FD190F70052FC7C /* ATSketchKit in Resources */ = {isa = PBXBuildFile; fileRef = AB8567FE1FD190F60052FC7C /* ATSketchKit */; };
+		AB8568011FD198230052FC7C /* SketchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8568001FD198230052FC7C /* SketchViewController.swift */; };
+		AB8568031FD1A58B0052FC7C /* SketchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8568021FD1A58B0052FC7C /* SketchPresenter.swift */; };
+		AB8568051FD1A8590052FC7C /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8568041FD1A8590052FC7C /* Presenter.swift */; };
+		BA6DB1B1FDC5FA7A5D66BF6B /* Pods_Sketch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD584A282B739818D89A55B /* Pods_Sketch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9FD584A282B739818D89A55B /* Pods_Sketch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sketch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8567DD1FD16F8D0052FC7C /* Sketch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sketch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8567E01FD16F8D0052FC7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB8567E21FD16F8D0052FC7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +31,15 @@
 		AB8567E71FD16F8D0052FC7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB8567EA1FD16F8D0052FC7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB8567EC1FD16F8D0052FC7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB8567F81FD170A20052FC7C /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		AB8567FA1FD171C20052FC7C /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
+		AB8567FC1FD171E10052FC7C /* ColorPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPicker.xib; sourceTree = "<group>"; };
+		AB8567FE1FD190F60052FC7C /* ATSketchKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ATSketchKit; sourceTree = "<group>"; };
+		AB8568001FD198230052FC7C /* SketchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchViewController.swift; sourceTree = "<group>"; };
+		AB8568021FD1A58B0052FC7C /* SketchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchPresenter.swift; sourceTree = "<group>"; };
+		AB8568041FD1A8590052FC7C /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		BB2F0906BAEA339CA9F4159F /* Pods-Sketch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sketch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sketch/Pods-Sketch.debug.xcconfig"; sourceTree = "<group>"; };
+		F363B06DAACE6274062FB38A /* Pods-Sketch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sketch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sketch/Pods-Sketch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6DB1B1FDC5FA7A5D66BF6B /* Pods_Sketch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +59,8 @@
 			children = (
 				AB8567DF1FD16F8D0052FC7C /* Sketch */,
 				AB8567DE1FD16F8D0052FC7C /* Products */,
+				C4B8B23E7443BF151F6A1C75 /* Pods */,
+				EC48F5A837168B1B2FCC267F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +75,70 @@
 		AB8567DF1FD16F8D0052FC7C /* Sketch */ = {
 			isa = PBXGroup;
 			children = (
+				AB8567F51FD170490052FC7C /* SketchView */,
+				AB8567F41FD170380052FC7C /* CustomViews */,
 				AB8567E01FD16F8D0052FC7C /* AppDelegate.swift */,
 				AB8567E21FD16F8D0052FC7C /* ViewController.swift */,
 				AB8567E41FD16F8D0052FC7C /* Main.storyboard */,
 				AB8567E71FD16F8D0052FC7C /* Assets.xcassets */,
 				AB8567E91FD16F8D0052FC7C /* LaunchScreen.storyboard */,
 				AB8567EC1FD16F8D0052FC7C /* Info.plist */,
+				AB8567F81FD170A20052FC7C /* README.rtf */,
 			);
 			path = Sketch;
+			sourceTree = "<group>";
+		};
+		AB8567F41FD170380052FC7C /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				AB8567FE1FD190F60052FC7C /* ATSketchKit */,
+				AB8567F71FD1706C0052FC7C /* LineSizePicker */,
+				AB8567F61FD170580052FC7C /* ColorPicker */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		AB8567F51FD170490052FC7C /* SketchView */ = {
+			isa = PBXGroup;
+			children = (
+				AB8568041FD1A8590052FC7C /* Presenter.swift */,
+				AB8568001FD198230052FC7C /* SketchViewController.swift */,
+				AB8568021FD1A58B0052FC7C /* SketchPresenter.swift */,
+			);
+			path = SketchView;
+			sourceTree = "<group>";
+		};
+		AB8567F61FD170580052FC7C /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				AB8567FA1FD171C20052FC7C /* ColorPicker.swift */,
+				AB8567FC1FD171E10052FC7C /* ColorPicker.xib */,
+			);
+			path = ColorPicker;
+			sourceTree = "<group>";
+		};
+		AB8567F71FD1706C0052FC7C /* LineSizePicker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LineSizePicker;
+			sourceTree = "<group>";
+		};
+		C4B8B23E7443BF151F6A1C75 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB2F0906BAEA339CA9F4159F /* Pods-Sketch.debug.xcconfig */,
+				F363B06DAACE6274062FB38A /* Pods-Sketch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC48F5A837168B1B2FCC267F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FD584A282B739818D89A55B /* Pods_Sketch.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +148,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB8567EF1FD16F8D0052FC7C /* Build configuration list for PBXNativeTarget "Sketch" */;
 			buildPhases = (
+				7167EF874A96F1659D10BFAE /* [CP] Check Pods Manifest.lock */,
 				AB8567D91FD16F8D0052FC7C /* Sources */,
 				AB8567DA1FD16F8D0052FC7C /* Frameworks */,
 				AB8567DB1FD16F8D0052FC7C /* Resources */,
+				11E94E5FCAC5A17FF7EA7BC2 /* [CP] Embed Pods Frameworks */,
+				B1A1A510EDDA1269F09584EA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,19 +205,82 @@
 			files = (
 				AB8567EB1FD16F8D0052FC7C /* LaunchScreen.storyboard in Resources */,
 				AB8567E81FD16F8D0052FC7C /* Assets.xcassets in Resources */,
+				AB8567F91FD170A20052FC7C /* README.rtf in Resources */,
+				AB8567FD1FD171E10052FC7C /* ColorPicker.xib in Resources */,
+				AB8567FF1FD190F70052FC7C /* ATSketchKit in Resources */,
 				AB8567E61FD16F8D0052FC7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11E94E5FCAC5A17FF7EA7BC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sketch/Pods-Sketch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sketch/Pods-Sketch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7167EF874A96F1659D10BFAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sketch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1A1A510EDDA1269F09584EA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sketch/Pods-Sketch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AB8567D91FD16F8D0052FC7C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8568051FD1A8590052FC7C /* Presenter.swift in Sources */,
 				AB8567E31FD16F8D0052FC7C /* ViewController.swift in Sources */,
 				AB8567E11FD16F8D0052FC7C /* AppDelegate.swift in Sources */,
+				AB8568031FD1A58B0052FC7C /* SketchPresenter.swift in Sources */,
+				AB8568011FD198230052FC7C /* SketchViewController.swift in Sources */,
+				AB8567FB1FD171C20052FC7C /* ColorPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,9 +415,11 @@
 		};
 		AB8567F01FD16F8D0052FC7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB2F0906BAEA339CA9F4159F /* Pods-Sketch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J83X3QNJRW;
 				INFOPLIST_FILE = Sketch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.msalah.Sketch;
@@ -286,9 +431,11 @@
 		};
 		AB8567F11FD16F8D0052FC7C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F363B06DAACE6274062FB38A /* Pods-Sketch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J83X3QNJRW;
 				INFOPLIST_FILE = Sketch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.msalah.Sketch;
