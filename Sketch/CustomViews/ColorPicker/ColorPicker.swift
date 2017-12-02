@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import RxSwift
+//import RxSwift
 
 protocol ColorPickerDelegate {
     func colorDidChange (_ color:UIColor)
-    
+    func onDismiss()
 }
 
 
@@ -23,11 +23,12 @@ class ColorPicker: UIView, CustomView {
     @IBOutlet weak var blueSlider: UISlider!
     @IBOutlet weak var colorView: UIImageView!
     
-    var red:CGFloat = 0.0
-    var green:CGFloat = 0.0
-    var blue:CGFloat = 0.0
+    var delegate:ColorPickerDelegate?
+    var red:CGFloat = 255.0
+    var green:CGFloat = 255.0
+    var blue:CGFloat = 255.0
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var color: Variable<UIColor> = Variable(UIColor.white)
+//    var color: Variable<UIColor> = Variable(UIColor.white)
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -97,17 +98,18 @@ class ColorPicker: UIView, CustomView {
             }
         }
         
+        delegate?.onDismiss()
     }
     
     
     @IBAction func onCancelClicked(_ sender: UIButton) {
-        dismiss()
-        
+        Dismiss()
     }
     
     @IBAction func onDoneClicked(_ sender: UIButton) {
-        dismiss()
-        color.value = self.colorView.backgroundColor!
+        Dismiss()
+        delegate?.colorDidChange(self.colorView.backgroundColor!)
+//        color.value = self.colorView.backgroundColor!
     }
     
     @IBAction func colorChange(_ sender: UISlider) {

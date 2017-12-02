@@ -17,7 +17,10 @@ class SketchViewController: UIViewController {
     @IBOutlet weak var eraser: UIButton!
     @IBOutlet weak var undo: UIButton!
     @IBOutlet weak var redo: UIButton!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var backgroundImage: UIImageView!
     
+    var sketchPersenterActions:SketchPersenterActions = SketchPresenter() as! SketchPersenterActions
     var buttons:[UIButton]!
     
     override func viewDidLoad() {
@@ -27,8 +30,9 @@ class SketchViewController: UIViewController {
     }
     
     func setupUI() {
-        buttons = [colorPicker, brushSize, pencil, eraser, undo, redo]
+        buttons = [colorPicker, brushSize, pencil, eraser]
         self.pencil.isSelected = true
+        self.sketchPersenterActions.attachView(self)
     }
 
     func deselectAllButtonsExcept(_ button:UIButton) {
@@ -48,26 +52,49 @@ class SketchViewController: UIViewController {
     
     @IBAction func colorPickerDidClicked(_ sender: UIButton) {
         deselectAllButtonsExcept(sender)
+        sketchPersenterActions.showColorPicker()
     }
     
     @IBAction func DidClicked(_ sender: UIButton) {
         deselectAllButtonsExcept(sender)
+        sketchPersenterActions.showSizeSlider()
     }
     
     @IBAction func pencilDidClicked(_ sender: UIButton) {
         deselectAllButtonsExcept(sender)
+        sketchPersenterActions.setCurrentToolPencil()
     }
     
     @IBAction func eraserDidClicked(_ sender: UIButton) {
         deselectAllButtonsExcept(sender)
+        sketchPersenterActions.setCurrentToolEraser()
     }
     
     @IBAction func undoDidClicked(_ sender: UIButton) {
-        deselectAllButtonsExcept(sender)
+        sketchPersenterActions.undoAction()
     }
     
     @IBAction func redoDidClicked(_ sender: UIButton) {
-        deselectAllButtonsExcept(sender)
+        sketchPersenterActions.redoAction()
+    }
+    
+    @IBAction func loadImageDidClicked(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary;
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+//            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func resetImageDidClicked(_ sender: UIButton) {
+        sketchPersenterActions.resetAllDrawings()
+    }
+    
+    @IBAction func saveImageDidClicked(_ sender: UIButton) {
+        sketchPersenterActions.SavePicture(self.backgroundImage)
     }
     
     
@@ -82,4 +109,73 @@ class SketchViewController: UIViewController {
     }
     */
 
+   
+    
+    deinit {
+        self.sketchPersenterActions.detachView(self)
+    }
+}
+
+extension SketchViewController: SketchViewDelegate {
+    
+    func frame() -> CGRect{
+        return self.containerView.bounds
+    }
+    
+    func backToPencil() {
+        deselectAllButtonsExcept(pencil)
+    }
+    
+    // Attach the drawing View
+    func addSketchView(_ sketch:UIView) {
+        sketch.backgroundColor = UIColor.clear
+        self.containerView.addSubview(sketch)
+    }
+    
+    // Undo & Redo
+    func undoAvilable(_ isAvailable:Bool) {
+        undo.isEnabled = isAvailable
+        undo.isSelected = isAvailable
+    }
+    func redoAvilable(_ isAvailable:Bool){
+        redo.isEnabled = isAvailable
+        redo.isSelected = isAvailable
+    }
+    
+    // Attach View (colorPicker or brushSize)
+    func attachCustomView(_ customView:CustomView){
+        
+        self.view.addSubview(customView as! UIView)
+        (customView as! UIView).isHidden = true
+        customView.Dismiss()
+    }
+    
+    func showCustomView(_ customView:CustomView){
+        (customView as! UIView).isHidden = false
+        customView.show()
+    }
+    
+    func dismissCustomView(_ customView:CustomView) {
+        customView.Dismiss()
+    }
+    
+    func clearBackground() {
+        self.backgroundImage.image = nil
+    }
+}
+
+extension SketchViewController :UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+   
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] {
+            backgroundImage.image = (image as! UIImage)
+        }
+        dismiss(animated:true, completion: nil)
+    }
+    
+    
+     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated:true, completion: nil)
+    }
 }

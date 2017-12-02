@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0146021FD31D8200BF6C03 /* LineSizePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0146011FD31D8200BF6C03 /* LineSizePicker.swift */; };
+		AB0146041FD31D8C00BF6C03 /* LineSizePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0146031FD31D8C00BF6C03 /* LineSizePicker.xib */; };
 		AB8567E11FD16F8D0052FC7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8567E01FD16F8D0052FC7C /* AppDelegate.swift */; };
 		AB8567E31FD16F8D0052FC7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8567E21FD16F8D0052FC7C /* ViewController.swift */; };
 		AB8567E61FD16F8D0052FC7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8567E41FD16F8D0052FC7C /* Main.storyboard */; };
@@ -15,15 +17,17 @@
 		AB8567F91FD170A20052FC7C /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AB8567F81FD170A20052FC7C /* README.rtf */; };
 		AB8567FB1FD171C20052FC7C /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8567FA1FD171C20052FC7C /* ColorPicker.swift */; };
 		AB8567FD1FD171E10052FC7C /* ColorPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8567FC1FD171E10052FC7C /* ColorPicker.xib */; };
-		AB8567FF1FD190F70052FC7C /* ATSketchKit in Resources */ = {isa = PBXBuildFile; fileRef = AB8567FE1FD190F60052FC7C /* ATSketchKit */; };
 		AB8568011FD198230052FC7C /* SketchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8568001FD198230052FC7C /* SketchViewController.swift */; };
 		AB8568031FD1A58B0052FC7C /* SketchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8568021FD1A58B0052FC7C /* SketchPresenter.swift */; };
 		AB8568051FD1A8590052FC7C /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8568041FD1A8590052FC7C /* Presenter.swift */; };
+		ABBB7AF71FD1CC3400797496 /* SwiftyDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBB7AF61FD1CC3400797496 /* SwiftyDraw.swift */; };
 		BA6DB1B1FDC5FA7A5D66BF6B /* Pods_Sketch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD584A282B739818D89A55B /* Pods_Sketch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9FD584A282B739818D89A55B /* Pods_Sketch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sketch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0146011FD31D8200BF6C03 /* LineSizePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSizePicker.swift; sourceTree = "<group>"; };
+		AB0146031FD31D8C00BF6C03 /* LineSizePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineSizePicker.xib; sourceTree = "<group>"; };
 		AB8567DD1FD16F8D0052FC7C /* Sketch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sketch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8567E01FD16F8D0052FC7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB8567E21FD16F8D0052FC7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,10 +38,10 @@
 		AB8567F81FD170A20052FC7C /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
 		AB8567FA1FD171C20052FC7C /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		AB8567FC1FD171E10052FC7C /* ColorPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPicker.xib; sourceTree = "<group>"; };
-		AB8567FE1FD190F60052FC7C /* ATSketchKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ATSketchKit; sourceTree = "<group>"; };
 		AB8568001FD198230052FC7C /* SketchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchViewController.swift; sourceTree = "<group>"; };
 		AB8568021FD1A58B0052FC7C /* SketchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchPresenter.swift; sourceTree = "<group>"; };
 		AB8568041FD1A8590052FC7C /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		ABBB7AF61FD1CC3400797496 /* SwiftyDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyDraw.swift; sourceTree = "<group>"; };
 		BB2F0906BAEA339CA9F4159F /* Pods-Sketch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sketch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sketch/Pods-Sketch.debug.xcconfig"; sourceTree = "<group>"; };
 		F363B06DAACE6274062FB38A /* Pods-Sketch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sketch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sketch/Pods-Sketch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +79,7 @@
 		AB8567DF1FD16F8D0052FC7C /* Sketch */ = {
 			isa = PBXGroup;
 			children = (
+				ABBB7AF61FD1CC3400797496 /* SwiftyDraw.swift */,
 				AB8567F51FD170490052FC7C /* SketchView */,
 				AB8567F41FD170380052FC7C /* CustomViews */,
 				AB8567E01FD16F8D0052FC7C /* AppDelegate.swift */,
@@ -91,7 +96,6 @@
 		AB8567F41FD170380052FC7C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				AB8567FE1FD190F60052FC7C /* ATSketchKit */,
 				AB8567F71FD1706C0052FC7C /* LineSizePicker */,
 				AB8567F61FD170580052FC7C /* ColorPicker */,
 			);
@@ -120,6 +124,8 @@
 		AB8567F71FD1706C0052FC7C /* LineSizePicker */ = {
 			isa = PBXGroup;
 			children = (
+				AB0146011FD31D8200BF6C03 /* LineSizePicker.swift */,
+				AB0146031FD31D8C00BF6C03 /* LineSizePicker.xib */,
 			);
 			path = LineSizePicker;
 			sourceTree = "<group>";
@@ -203,11 +209,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB0146041FD31D8C00BF6C03 /* LineSizePicker.xib in Resources */,
 				AB8567EB1FD16F8D0052FC7C /* LaunchScreen.storyboard in Resources */,
 				AB8567E81FD16F8D0052FC7C /* Assets.xcassets in Resources */,
 				AB8567F91FD170A20052FC7C /* README.rtf in Resources */,
 				AB8567FD1FD171E10052FC7C /* ColorPicker.xib in Resources */,
-				AB8567FF1FD190F70052FC7C /* ATSketchKit in Resources */,
 				AB8567E61FD16F8D0052FC7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB0146021FD31D8200BF6C03 /* LineSizePicker.swift in Sources */,
+				ABBB7AF71FD1CC3400797496 /* SwiftyDraw.swift in Sources */,
 				AB8568051FD1A8590052FC7C /* Presenter.swift in Sources */,
 				AB8567E31FD16F8D0052FC7C /* ViewController.swift in Sources */,
 				AB8567E11FD16F8D0052FC7C /* AppDelegate.swift in Sources */,
@@ -420,12 +428,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J83X3QNJRW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sketch",
+					"$(PROJECT_DIR)/Sketch/ATSketchKit",
+				);
 				INFOPLIST_FILE = Sketch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.msalah.Sketch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -436,12 +450,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J83X3QNJRW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sketch",
+					"$(PROJECT_DIR)/Sketch/ATSketchKit",
+				);
 				INFOPLIST_FILE = Sketch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.msalah.Sketch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

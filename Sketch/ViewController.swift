@@ -25,9 +25,9 @@ class ViewController: UIViewController {
         colorPicker.center = self.view.center
         colorPicker.show()
         
-        self.colorPicker.color.asObservable().subscribe(onNext: { (color) in
-            print("Color Changed to : \(String(describing: color))")
-        })
+//        self.colorPicker.color.asObservable().subscribe(onNext: { (color) in
+//            print("Color Changed to : \(String(describing: color))")
+//        })
     }
     
     @IBAction func show(_ sender: UIButton) {

@@ -7,8 +7,6 @@ target 'Sketch' do
 
   # Pods for Sketch
 
-pod 'RxSwift'
-pod 'RxCocoa'
   
 
 end
